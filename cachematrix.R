@@ -3,6 +3,9 @@
 ## I have used the same ANALOGY for both functions as seen for the 
 ## vectors Function's in coursera website.
 
+## In other words I am going to use similar structure as used for a vector
+## the LIST can hold not only vector's, they can hold Matrices as well.
+
 # makeCacheMatrix creates a list containing a function to
 
 # Assuming that a matrix is given to the function as input
@@ -16,8 +19,6 @@
 
 # Te inverse matrix is loaded into get
 # 4. get the value of inverse of the matrix
-
-
 
 makeCacheMatrix <- function(x = matrix()) {
   
@@ -38,9 +39,7 @@ makeCacheMatrix <- function(x = matrix()) {
   getinverse <- function() inv
   
   list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
-
 }
-
 
 # The following function returns the inverse of the matrix. If the first iteration
 # is already completed then the cache will have the inverse matrix. so,It first checks if
@@ -58,17 +57,17 @@ cacheSolve <- function(x, ...) {
     return(inv)
   }
 
-# Since we dont have a cache already we calcukate Inverse here.  
+# Since we dont have a cache already we calculate Inverse here.  
   origialMatrix <- x$get()
   inv <- solve(origialMatrix)
   
 # We have to assign it to setinverse with the computed inverse Matrix.  
   x$setinverse(inv)
   inv
-# Now if we call the Cachesolve function we get the Inver of Matrix.
 
 # To verify the functions pls input a matrix to makeCacheMatrix and then 
 # call Cachesolve.
+# Now if we call the Cachesolve function we get the Invere of Matrix.
 
 # Please use a matrix which can be inversed as the functions we designed assuming
 # the input matrix is a inversible one.
