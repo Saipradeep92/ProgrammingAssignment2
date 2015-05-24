@@ -65,4 +65,11 @@ cacheSolve <- function(x, ...) {
 # We have to assign it to setinverse with the computed inverse Matrix.  
   x$setinverse(inv)
   inv
+# Now if we call the Cachesolve function we get the Inver of Matrix.
+
+# To verify the functions pls input a matrix to makeCacheMatrix and then 
+# call Cachesolve.
+
+# Please use a matrix which can be inversed as the functions we designed assuming
+# the input matrix is a inversible one.
 }
